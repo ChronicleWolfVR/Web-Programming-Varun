@@ -19,4 +19,4 @@ Students should maintain documentation for their code and projects. This include
 ### Participation in Discussions: 
 Encourage students to actively participate in GitHub discussions, including responding to comments and contributing to meaningful conversations.
 ### Adherence to GitHub Policies: 
-qEnsure that students are following GitHub's policies and best practices, including respecting licenses and avoiding plagiarism.
+Ensure that students are following GitHub's policies and best practices, including respecting licenses and avoiding plagiarism.
