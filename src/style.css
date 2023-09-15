@@ -25,7 +25,7 @@ p {
 	margin-top: 0; 
 	text-align: justify;
 	}
-h3 { 
+h3 { text-align: left;
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
@@ -93,12 +93,15 @@ header {
 }
 
 .summary {
+	padding: 20px;
 	clear: both;
 	background-color: #8FAAEB; 
 	color:white;
 	margin: 20px 20px 20px 10px; 
 	width: 160px; 
 	float: right;/* switched the summary text to the right side */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/* Adds box shadow effect */
+	border-radius: 25px; /* Adds curved corners to the summary box */
 	}
 .summary p {
 	font: italic 1.1em/2.2 georgia; 
@@ -116,9 +119,9 @@ header {
 	text-align: center;
 	background-color: white;
 	}
-.explanation{
-	margin-top: 20px;
-	margin-left: -10px;
+.explanation,.participation,.benefits,.requirements {
+	margin-top: 20px; /* Adds a margin to the top to distance from the other cards */
+	margin-left: -10px; /* removes default margin to the right to allign with the first card */
 	 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* adds the card effect */
 	padding: 16px;
@@ -134,6 +137,10 @@ header {
 footer { 
 	text-align: center; 
 	}
+footer a:link{
+	color:#2659D4; /*Changed colours of the links at the bottom of the page */
+
+}
 footer a:link, footer a:visited { 
 	margin-right: 20px; 
 	}
