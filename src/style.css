@@ -29,17 +29,17 @@ h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
-	color: #7D775C;
+	color: #D4A126;
 	}
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #ADD8E6;	/* Changes the links to light blue when not clicked */
+	color: #D4A126;	/* Changes the links to light blue when not clicked */
 	}
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #800080;	/* Changes the links to a pruple if they have been used */
+	color: #D4A126;	/* Changes the links to a pruple if they have been used */
 	}
 a:hover, a:focus, a:active { 
 	text-decoration: underline; 
@@ -93,15 +93,21 @@ header {
 }
 
 .summary {
-	clear: both; 
+	clear: both;
+	background-color: #8FAAEB; 
+	color:white;
 	margin: 20px 20px 20px 10px; 
 	width: 160px; 
-	float: left;
+	float: right;/* switched the summary text to the right side */
 	}
 .summary p {
 	font: italic 1.1em/2.2 georgia; 
 	text-align: center;
 	}
+.summary a {
+	color: white;
+
+}
 
 .preamble {
 	clear: right; 
@@ -179,10 +185,10 @@ footer a:link, footer a:visited {
 	list-style-type: none;
 	}
 .sidebar li a:link {
-	color: #ADD8E6;
+	color: #D4A126;
 	}
 .sidebar li a:visited {
-	color: #B3AE94;
+	color: #D4A126;
 	}
 
 
