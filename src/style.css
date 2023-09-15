@@ -111,8 +111,21 @@ header {
 
 .preamble {
 	clear: right; 
-	padding: 0px 10px 0 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* adds the card effect */
+	padding: 16px;
+	text-align: center;
+	background-color: white;
 	}
+.explanation{
+	margin-top: 20px;
+	margin-left: -10px;
+	 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* adds the card effect */
+	padding: 16px;
+	text-align: center;
+	background-color: white;
+
+}
 .supporting {	
 	padding-left: 10px; 
 	margin-bottom: 40px;
