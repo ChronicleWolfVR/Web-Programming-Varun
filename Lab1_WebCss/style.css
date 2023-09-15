@@ -153,7 +153,7 @@ footer a:link, footer a:visited {
 	}
 .sidebar .wrapper { 
 	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
+	/*background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; */
 	padding: 10px; 
 	margin-top: 150px; 
 	width: 130px; 
