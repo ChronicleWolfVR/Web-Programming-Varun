@@ -14,19 +14,22 @@
             font-size: 14px;
         }
     </style>
+    
+<script>
+    function changeColor() {
+        var heading = document.getElementById("heading");
+        heading.style.color = "red";
+    }
+</script>
+
 </head>
 <body>
-    <h1>Welcome to My Basic Website</h1>
+    <h1 id="heading">Welcome to My Basic Website</h1>
     <button onclick="changeColor()">Change Color</button>
 
-    <script>
-        function changeColor() {
-            var heading = document.getElementById("heading");
-            heading.style.color = "red";
-        }
-    </script>
-
     
+
+
     <p>This is a paragraph of text.</p>
 </body>
 </html>
