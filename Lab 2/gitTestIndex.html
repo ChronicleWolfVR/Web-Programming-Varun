@@ -24,8 +24,7 @@ function handleClick(event) {
   target.style.backgroundColor = "red";
 }
 
-// Get the element with the ID "myElement"
-var element = null;
+var element = document.getElementById("Button")
 
 // Add a click event listener to the element, calling the handleClick function
 element.addEventListener("click", handleClick);
@@ -36,7 +35,7 @@ element.addEventListener("click", handleClick);
     <h1 id="heading">Welcome to My Basic Website</h1>
 
     <!-- Button that triggers the handleClick function -->
-    <button onclick="handleClick(event)">Click me</button>
+    <button id="Button" onclick="handleClick(event)">Click me</button>
 
     
 
