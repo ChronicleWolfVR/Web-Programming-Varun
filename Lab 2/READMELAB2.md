@@ -33,3 +33,10 @@ function handleClick(event) {
   target.style.backgroundColor = "red";
 }
 ```
+This should change the button element's background from white to red on the webpage.
+
+## Contributing
+This is a Heriot Watt Lab exercise which works towards a degree. Due to this being academic content, no pull requests are allowed.
+
+## License
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
