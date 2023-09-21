@@ -4,6 +4,7 @@
 
     <title>My Basic Website</title>
     <style>
+        /* Styling for the webpage */
         body {
             font-family: Arial, sans-serif;
         }
@@ -16,18 +17,25 @@
     </style>
 
 <script>
+
+// Function to handle the click event    
 function handleClick(event) {
   var target = event.target;
   target.style.backgroundColor = "red";
 }
+
+// Get the element with the ID "myElement"
 var element = document.getElementById("myElement");
 
+// Add a click event listener to the element, calling the handleClick function
 element.addEventListener("click", handleClick);
 </script>
 
 </head>
 <body>
     <h1 id="heading">Welcome to My Basic Website</h1>
+
+    <!-- Button that triggers the handleClick function -->
     <button onclick="handleClick(event)">Click me</button>
 
     
