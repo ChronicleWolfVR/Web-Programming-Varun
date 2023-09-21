@@ -26,7 +26,7 @@ When button is clicked:
     <button id="Button" onclick="handleClick(event)">Click me</button>
 ```
 This function is called:
-```html
+```javascript
 // Function to handle the click event    
 function handleClick(event) {
   var target = event.target;
