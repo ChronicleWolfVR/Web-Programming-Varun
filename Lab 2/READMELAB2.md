@@ -14,3 +14,14 @@ Work through the following exercises to develop your understanding of Javascript
 https://www.w3resource.com/javascript-exercises/
 
 Note: Attempt to solve the problems first (before looking at the solutions).
+
+## Installation
+Download the Lab 2 Folder and double click on the gitTestIndex.html file. This should open the webpage in you default browser
+
+## Usage
+
+When button is clicked:
+```html
+    <!-- Button that triggers the handleClick function -->
+    <button id="Button" onclick="handleClick(event)">Click me</button>
+```
