@@ -24,7 +24,7 @@ function handleClick(event) {
   target.style.backgroundColor = "red";
 }
 
-// Element variable captures button tag with id "Button"
+// Element variable captures button element on the HTML page
 var element = document.getElementById("Button")
 
 // Add a click event listener to the element, calling the handleClick function
@@ -36,7 +36,7 @@ element.addEventListener("click", handleClick);
     <h1 id="heading">Welcome to My Basic Website</h1>
 
     <!-- Button that triggers the handleClick function -->
-    <button id="Button">Click me</button>
+    <button id="Button" onclick="handleClick(event)">Click me</button>
 
     
 
