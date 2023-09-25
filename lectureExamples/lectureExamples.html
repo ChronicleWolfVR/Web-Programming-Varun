@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-    <title>My Basic Website</title>
-    <style>
-        /* Styling for the webpage */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            color: blue;
-        }
-        p {
-            font-size: 14px;
-        }
-    </style>
-
-<script>
-    function testFunction() {
-        // Display the type of the result of 4+7
-        alert("TypeOf function output: " + typeof (4+7));
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>My Basic Website</title>
+        <style>
+            /* Styling for the webpage */
+            body {
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                color: blue;
+            }
+            p {
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">Welcome to My Basic Website</h1>
     
-        // Declare and initialize some variables
-        var i, number_of_hits = 0, done = true, fruit = "yoghurt";
-        let ID = Symbol();
-        const pi = Math.PI;
+        <!-- Button that triggers the testFunction function -->
+        <button id="Button" onclick="testFunction()">Test Function</button>
+        <button id="combineStrings" onclick="combineStrings()">Combine Strings</button>
+        <form>
+            <h1>Login Form</h1>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="hidden" id="password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
     
-        // Display the type of the number_of_hits variable
-        alert("TypeOf number_of_hits: " + typeof number_of_hits);
+        <p>What crazy Javascript things can I do here?</p>
     
-        // Perform some arithmetic operations on the variable 'a'
-        var a = 22;
-        a *= 3;
-        alert( a );
+        <script>
+            // Define a function to test various JavaScript features and functions
+            function testFunction() {
+                // Display the type of the result of 4+7
+                alert("TypeOf function output: " + typeof (4+7));
+            
+                // Declare and initialize some variables to test out 3 ways to create variables
+                var i, number_of_hits = 0, done = true, fruit = "yoghurt";
+                let ID = Symbol();
+                const pi = Math.PI;
+            
+                // Display the type of the number_of_hits variable
+                alert("TypeOf number_of_hits: " + typeof number_of_hits);
+            
+                // Perform some arithmetic operations on the variable 'a'
+                var a = 22;
+                a *= 3;
+                alert( a );
+            
+                // Use a switch statement to randomly select a color using the math.random function
+                switch ( Math.floor(Math.random()*3) ) {
+                    case 1: col = "red";
+                    alert("red");
+                    break;
+                    case 2: col = "blue";
+                    alert("blue");
+                    break;
+                    default: col = "green";
+                    alert("green");
+                }
+                
+                // Calculate the sum of an array using a for loop
+                let sum = 0;
+                let arr = [1, 2, 3, 5, 7, 11, 13];
+                for (let item of arr) { sum += item; }
+                alert("Sum of array: " + sum);
+            }
     
-        // Use a switch statement to randomly select a color
-        switch ( Math.floor(Math.random()*3) ) {
-            case 1: col = "red";
-            alert("red");
-            break;
-            case 2: col = "blue";
-            alert("blue");
-            break;
-            default: col = "green";
-            alert("green");
-        }
-        
-        let sum = 0;
-        let arr = [1, 2, 3, 5, 7, 11, 13];
-        for (let item of arr) { sum += item; }
-        alert("Sum of array: " + sum);
-
-    }
-
-    function combineStrings() {
-        // Declare and initialize some variables
-        var str1 = "cat";
-        var str2 = "bat";
-        var str3 = str1 + " " + str2;
-        alert(str3);
-    }
-    
-    </script>
-
-</head>
-<body>
-    <h1 id="heading">Welcome to My Basic Website</h1>
-
-    <!-- Button that triggers the handleClick function -->
-    <button id="Button" onclick="testFunction()" >Does nothing yet!</button>
-    <button id="combineStrings" onclick="combineStrings()">Combine Strings</button>
-    <form>
-        <h1>Login Form</h1>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="hidden" id="password" name="password" required>
-        <input type="submit" value="Login">
-    </form>
-</body>
-
-    
-
-
-    <p>What crazy Javascript things can I do here?</p>
-</body>
-</html>
+            // Define a function to combine two strings and display the result
+            function combineStrings() {
+                // Declare and initialize some string variables to combine together
+                var str1 = "cat";
+                var str2 = "bat";
+                var str3 = str1 + " " + str2;
+                alert(str3);
+            }
+        </script>
+    </body>
+    </html>
