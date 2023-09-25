@@ -24,6 +24,7 @@
         <button id="Button" onclick="testFunction()">Test Function</button>
         <button id="combineStrings" onclick="combineStrings()">Combine Strings</button>
         <button id="typeCoercionTest" onclick="typeCoercionTest()">Type Coercion Test</button>
+        <buttqn id="CreationandDisplay" onclick="CreationandDisplay()">Creation and Display</button>
         <form>
             <h1>Login Form</h1>
             <label for="username">Username:</label>
@@ -86,6 +87,14 @@
                 var y = "5";
                 var z = x + y;
                 alert(z);
+            }
+
+            function CreationandDisplay(){
+                var n = new Object();
+                n.cat = [1,3,5];
+                n["cat"] = "hello";
+                n.cat = "1";
+                alert( n.cat );
             }
         </script>
     </body>
