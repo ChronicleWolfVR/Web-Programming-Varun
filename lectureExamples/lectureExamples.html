@@ -82,19 +82,20 @@
                 alert(str3);
             }
 
-            function typeCoercionTest(){
+            function typeCoercionTest(){ // Define a function to test type coercion in JavaScript
                 var x = 5;
                 var y = "5";
-                var z = x + y;
+                var z = x + y; // The value of z will be "55" because the + operator performs string concatenation when one of the operands is a string
                 alert(z);
             }
 
+            f// Define a function to create and display an object in JavaScript
             function CreationandDisplay(){
-                var n = new Object();
-                n.cat = [1,3,5];
-                n["cat"] = "hello";
-                n.cat = "1";
-                alert( n.cat );
+                var n = new Object(); // Create a new object using the Object constructor
+                n.cat = [1,3,5]; // Add an array to the object with the key "cat"
+                n["cat"] = "hello"; // Overwrite the value of the "cat" key with a string
+                n.cat = "1"; // Overwrite the value of the "cat" key with another string
+                alert( n.cat ); // Display the value of the "cat" key in an alert box
             }
         </script>
     </body>
