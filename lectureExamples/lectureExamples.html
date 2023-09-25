@@ -17,33 +17,38 @@
     </style>
 
 <script>
-function testFunction() {
-    alert("TypeOf function output: " + typeof (4+7));
-
-var i, number_of_hits = 0, done = true, fruit = "yoghurt";
-let ID = Symbol();
-const pi = Math.PI;
-
-alert("TypeOf number_of_hits: " + typeof number_of_hits);
-
-var a = 22;
-a *= 3;
-alert( a );
-
-switch ( Math.floor(Math.random()*3) ) {
-    case 1: col = "red";
-    alert("red");
-    break;
-    case 2: col = "blue";
-    alert("blue");
-    break;
-    default: col = "green";
-    alert("green");
-}
-
-}
-
-</script>
+    function testFunction() {
+        // Display the type of the result of 4+7
+        alert("TypeOf function output: " + typeof (4+7));
+    
+        // Declare and initialize some variables
+        var i, number_of_hits = 0, done = true, fruit = "yoghurt";
+        let ID = Symbol();
+        const pi = Math.PI;
+    
+        // Display the type of the number_of_hits variable
+        alert("TypeOf number_of_hits: " + typeof number_of_hits);
+    
+        // Perform some arithmetic operations on the variable 'a'
+        var a = 22;
+        a *= 3;
+        alert( a );
+    
+        // Use a switch statement to randomly select a color
+        switch ( Math.floor(Math.random()*3) ) {
+            case 1: col = "red";
+            alert("red");
+            break;
+            case 2: col = "blue";
+            alert("blue");
+            break;
+            default: col = "green";
+            alert("green");
+        }
+    
+    }
+    
+    </script>
 
 </head>
 <body>
