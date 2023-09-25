@@ -17,7 +17,7 @@
     </style>
 
 <script>
-function alertFunction() {
+function testFunction() {
     alert("TypeOf function output: " + typeof (4+7));
 
 var i, number_of_hits = 0, done = true, fruit = "yoghurt";
@@ -25,6 +25,11 @@ let ID = Symbol();
 const pi = Math.PI;
 
 alert("TypeOf number_of_hits: " + typeof number_of_hits);
+
+var a = 22;
+a *= 3;
+alert( a );
+
 }
 
 </script>
@@ -34,7 +39,7 @@ alert("TypeOf number_of_hits: " + typeof number_of_hits);
     <h1 id="heading">Welcome to My Basic Website</h1>
 
     <!-- Button that triggers the handleClick function -->
-    <button id="Button" onclick="alertFunction()" >Does nothing yet!</button>
+    <button id="Button" onclick="testFunction()" >Does nothing yet!</button>
     <form>
         <h1>Login Form</h1>
         <label for="username">Username:</label>
