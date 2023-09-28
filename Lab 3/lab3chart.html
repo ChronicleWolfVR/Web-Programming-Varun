@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Chart Website</title>
+    <style>
+        /* Define some basic styles for the website */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav {
+            background-color: orange;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #ddd;
+        }
+        section {
+            padding: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>My Chart Website</h1>
+    </header>
+    <!-- Navigation section -->
+    <nav>
+        <ul>
+            <li><a href="lab3chart.html">Home</a></li>
+        </ul>
+    </nav>
+    <!-- Main content section -->
+    <section>
+        <h2>Welcome to My Chart Website</h2>
+        <!-- Chart canvas element to start graphics-->
+        <div>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <!-- Chart.js library script -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- JavaScript code to create the bar chart -->
+        <script>
+            // Get the canvas element and its context
+            var ctx = document.getElementById('myChart').getContext('2d');
+            // Create a new chart object
+            var myChart = new Chart(ctx, {
+                type:'bar', // Set the chart type to bar
+                data: {
+                    labels: ['Airbus', 'Boeing', 'Plane A', 'Plane B', 'Plane C', 'Plane D'], // Set the labels for the x-axis
+                    datasets: [{
+                        label: 'Number of Votes for Planes', // Set the label for the dataset
+                        data: [60, 20, 3, 5, 2, 10], // Set the data for the y-axis
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ], // Set the background color for the bars
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ], // Set the border color for the bars
+                        borderWidth: 3 // Set the border width for the bars
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true // Set the y-axis to start at zero
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2022 My Chart Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
