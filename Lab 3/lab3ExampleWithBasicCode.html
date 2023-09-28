@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <script type="text/javascript">
+
+        document.body.style.height = '200pt';
+
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.2.2/cookiebanner.min.js';
+        script.id = 'cookiebanner';
+        script['data-height']   = '20';
+        script['data-position'] = 'top';
+        script['data-message']  = 'We use cookies to improve your experience on our website.';
+        document.head.appendChild(script); 
+
+        script.onload = function() {
+            console.log('loaded script');
+            cookiebanner.show();
+        }
+        console.log('ready');
+    </script>
+</head>
+<body>
+    <!-- Your HTML code here -->
+    
+</body>
+</html>
