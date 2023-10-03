@@ -1,140 +1,195 @@
 <!DOCTYPE html>
 <html>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>My Basic Website</title>
-        <style>
-            /* Styling for the webpage */
-            body {
-                font-family: Arial, sans-serif;
-            }
-            h1 {
-                color: blue;
-            }
-            p {
-                font-size: 14px;
-            }
-            form {
+<head>
+    <title>My Basic Website</title>
+    <style>
+        /* Styling for the webpage */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: blue;
+        }
+        p {
+            font-size: 14px;
+        }
+        form {
             background-color: #f2f2f2;
             border: 1px solid #ccc;
             padding: 20px;
             width: 400px;
             margin: 0 auto;
-            }
-            label {
+        }
+        label {
             display: block;
             margin-bottom: 10px;
-             }
-            input[type="text"], input[type="email"], textarea {
+        }
+        input[type="text"], input[type="email"], textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            }
-            input[type="submit"] {
+        }
+        input[type="submit"] {
             background-color: blue;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-             }
-            input[type="submit"]:hover {
+        }
+        input[type="submit"]:hover {
             background-color: lightblue;
-            }
-        </style>
-    </head>
-    <body>
-        <h1 id="heading">Welcome to My Basic Website</h1>
-    
-        <!-- Button that triggers the testFunction function -->
-        <button id="Button" onclick="testFunction()">Test Function</button>
-        <button id="combineStrings" onclick="combineStrings()">Combine Strings</button>
-        <button id="typeCoercionTest" onclick="typeCoercionTest()">Type Coercion Test</button>
-        <button id="CreationandDisplay" onclick="CreationandDisplay()">CreationandDisplay</button>
-        <button id="createTable" onclick="createTable()">createTable</button>
-        <button id="changeParagraph" onclick="changeParagraph()">Change Paragraph</button>
-        <form>
-            <h1>Login Form</h1>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="hidden" id="password" name="password" required>
-            <input type="submit" value="Login">
-        </form>
-    
-        <p id="paragraph">What crazy Javascript things can I do here?</p>
-    
-        <script>
-            // Define a function to test various JavaScript features and functions
-            function testFunction() {
-                // Display the type of the result of 4+7
-                alert("TypeOf function output: " + typeof (4+7));
-            
-                // Declare and initialize some variables to test out 3 ways to create variables
-                var i, number_of_hits = 0, done = true, fruit = "yoghurt";
-                let ID = Symbol();
-                const pi = Math.PI;
-            
-                // Display the type of the number_of_hits variable
-                alert("TypeOf number_of_hits: " + typeof number_of_hits);
-            
-                // Perform some arithmetic operations on the variable 'a'
-                //var a = 1/0;
-                //alert( a ); This calculation slows the page down too much
-            
-                // Use a switch statement to randomly select a color using the math.random function
-                switch ( Math.floor(Math.random()*3) ) {
-                    case 1: col = "red";
-                    alert("red");
-                    break;
-                    case 2: col = "blue";
-                    alert("blue");
-                    break;
-                    default: col = "green";
-                    alert("green");
-                }
-                
-                // Calculate the sum of an array using a for loop
-                let sum = 0;
-                let arr = [1, 2, 3, 5, 7, 11, 13];
-                for (let item of arr) { sum += item; }
-                alert("Sum of array: " + sum);
-            }
-    
-            // Define a function to combine two strings and display the result
-            function combineStrings() {
-                // Declare and initialize some string variables to combine together
-                var str1 = "cat";
-                var str2 = "bat";
-                var str3 = str1 + " " + str2;
-                alert(str3);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Welcome to My Basic Website</h1>
+
+    <!-- Button that triggers the testFunction function -->
+    <button id="Button" onclick="testFunction()">Test Function</button>
+    <button id="combineStrings" onclick="combineStrings()">Combine Strings</button>
+    <button id="typeCoercionTest" onclick="typeCoercionTest()">Type Coercion Test</button>
+    <button id="CreationandDisplay" onclick="CreationandDisplay()">CreationandDisplay</button>
+    <button id="createTable" onclick="createTable()">createTable</button>
+    <button id="changeParagraph" onclick="changeParagraph()">Change Paragraph</button>
+
+    <!-- Login form -->
+    <form>
+        <h1>Login Form</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="hidden" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- Paragraph element -->
+    <p id="paragraph">What crazy Javascript things can I do here?</p>
+
+    <!-- JavaScript code -->
+    <script>
+        // Define a function to test various JavaScript features and functions
+        function testFunction() {
+            // Display the type of the result of 4+7
+            alert("TypeOf function output: " + typeof (4+7));
+
+            // Declare and initialize some variables to test out 3 ways to create variables
+            var i, number_of_hits = 0, done = true, fruit = "yoghurt";
+            let ID = Symbol();
+            const pi = Math.PI;
+
+            // Display the type of the number_of_hits variable
+            alert("TypeOf number_of_hits: " + typeof number_of_hits);
+
+            // Perform some arithmetic operations on the variable 'a'
+            //var a = 1/0;
+            //alert( a ); This calculation slows the page down too much
+
+            // Use a switch statement to randomly select a color using the math.random function
+            switch ( Math.floor(Math.random()*3) ) {
+                case 1: col = "red";
+                alert("red");
+                break;
+                case 2: col = "blue";
+                alert("blue");
+                break;
+                default: col = "green";
+                alert("green");
             }
 
-            function typeCoercionTest(){ // Define a function to test type coercion in JavaScript
-                var x = 5;
-                var y = "5";
-                var z = x + y; // The value of z will be "55" because the + operator performs string concatenation when one of the operands is a string
-                alert(z);
-            }
+            // Calculate the sum of an array using a for loop
+            let sum = 0;
+            let arr = [1, 2, 3, 5, 7, 11, 13];
+            for (let item of arr) { sum += item; }
+            alert("Sum of array: " + sum);
+        }
 
-            f// Define a function to create and display an object in JavaScript
-            function CreationandDisplay(){
-                var n = new Object(); // Create a new object using the Object constructor
-                n.cat = [1,3,5]; // Add an array to the object with the key "cat"
-                n["cat"] = "hello"; // Overwrite the value of the "cat" key with a string
-                n.cat = "1"; // Overwrite the value of the "cat" key with another string
-                alert( n.cat ); // Display the value of the "cat" key in an alert box
-            }
+        // Define a function to combine two strings and display the result
+        function combineStrings() {
+            // Declare and initialize some string variables to combine together
+            var str1 = "cat";
+            var str2 = "bat";
 
-           // This is a JavaScript function that changes the text of a paragraph element
-            function changeParagraph() {
-                // Get the paragraph element by its ID
-                document.getElementById("paragraph").innerHTML = "This is a new paragraph";
-            }
-        </script>
-    </body>
-    </html>
+            // Combine the strings and display the result
+            var result = str1 + str2;
+            alert("Combined string: " + result);
+        }
+
+        // Define a function to test type coercion in JavaScript
+        function typeCoercionTest() {
+            // Declare and initialize some variables to test type coercion
+            var x = "5";
+            var y = 2;
+
+            // Perform some arithmetic operations to test type coercion
+            var result1 = x + y;
+            var result2 = x - y;
+            var result3 = x * y;
+            var result4 = x / y;
+
+            // Display the results of the arithmetic operations
+            alert("Result 1: " + result1);
+            alert("Result 2: " + result2);
+            alert("Result 3: " + result3);
+            alert("Result 4: " + result4);
+        }
+
+        // Define a function to create and display a new element on the web page
+        function CreationandDisplay() {
+            // Create a new paragraph element
+            var para = document.createElement("p");
+
+            // Add some text to the paragraph element
+            var node = document.createTextNode("This is a new paragraph.");
+
+            // Add the text to the paragraph element
+            para.appendChild(node);
+
+            // Add the paragraph element to the web page
+            var element = document.getElementById("heading");
+            element.appendChild(para);
+        }
+
+        // Define a function to create a table on the web page
+        function createTable() {
+            // Create a new table element
+            var table = document.createElement("table");
+
+            // Create a new row for the table header
+            var headerRow = table.insertRow(0);
+
+            // Create some table header cells and add them to the header row
+            var headerCell1 = headerRow.insertCell(0);
+            var headerCell2 = headerRow.insertCell(1);
+            headerCell1.innerHTML = "<b>Name</b>";
+            headerCell2.innerHTML = "<b>Age</b>";
+
+            // Create some data rows for the table
+            var dataRow1 = table.insertRow(1);
+            var dataCell1a = dataRow1.insertCell(0);
+            var dataCell1b = dataRow1.insertCell(1);
+            dataCell1a.innerHTML = "John";
+            dataCell1b.innerHTML = "25";
+
+            var dataRow2 = table.insertRow(2);
+            var dataCell2a = dataRow2.insertCell(0);
+            var dataCell2b = dataRow2.insertCell(1);
+            dataCell2a.innerHTML = "Jane";
+            dataCell2b.innerHTML = "30";
+
+            // Add the table to the web page
+            var element = document.getElementById("paragraph");
+            element.appendChild(table);
+        }
+
+        // Define a function to change the text of a paragraph element
+        function changeParagraph() {
+            // Get the paragraph element by its ID
+            document.getElementById("paragraph").innerHTML = "This is a new paragraph";
+        }
+    </script>
+</body>
+</html>
