@@ -25,6 +25,8 @@
         <button id="combineStrings" onclick="combineStrings()">Combine Strings</button>
         <button id="typeCoercionTest" onclick="typeCoercionTest()">Type Coercion Test</button>
         <button id="CreationandDisplay" onclick="CreationandDisplay()">CreationandDisplay</button>
+        <button id="createTable" onclick="createTable()">createTable</button>
+        <button id="changeParagraph" onclick="changeParagraph()">Change Paragraph</button>
         <form>
             <h1>Login Form</h1>
             <label for="username">Username:</label>
@@ -34,7 +36,7 @@
             <input type="submit" value="Login">
         </form>
     
-        <p>What crazy Javascript things can I do here?</p>
+        <p id="paragraph">What crazy Javascript things can I do here?</p>
     
         <script>
             // Define a function to test various JavaScript features and functions
@@ -96,6 +98,12 @@
                 n["cat"] = "hello"; // Overwrite the value of the "cat" key with a string
                 n.cat = "1"; // Overwrite the value of the "cat" key with another string
                 alert( n.cat ); // Display the value of the "cat" key in an alert box
+            }
+
+           // This is a JavaScript function that changes the text of a paragraph element
+            function changeParagraph() {
+                // Get the paragraph element by its ID
+                document.getElementById("paragraph").innerHTML = "This is a new paragraph";
             }
         </script>
     </body>
