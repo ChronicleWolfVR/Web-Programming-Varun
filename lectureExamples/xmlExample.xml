@@ -11,3 +11,6 @@
     <phone-no>07572222</phone-no>
     <email>blah@blah.co.uk</email>
 </contact-info>
+<![CDATA[
+The parser will ignore this text
+]]>
