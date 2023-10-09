@@ -1,0 +1,13 @@
+<?xml version = "1.0"  encoding = "UTF-8"?>
+<contact-info>
+    <name>
+        <first-name>Varun</first-name>
+        <last-name>Ravikumar</last-name>    
+    <address>
+        <house-no>25</house-no>
+        <street>Queen Street</street>
+        <postcode>Ehxxx</postcode>
+    </address>
+    <phone-no>07572222</phone-no>
+    <email>blah@blah.co.uk</email>
+</contact-info>
