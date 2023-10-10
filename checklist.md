@@ -1,4 +1,10 @@
 # GitHub Checklist
+
+## Table of Contents
+
+- [Account Setup](#account-setup)
+- [Repository Basics](#repository-basics)
+- [Cloning and Forking](#cloning-and-forking)
 ## Account Setup
 - [x] Create a GitHub account (and a repository)
 - [x] Add a README
