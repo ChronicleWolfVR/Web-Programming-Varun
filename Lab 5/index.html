@@ -1,0 +1,63 @@
+<!-- 
+FILEPATH: /Users/varunravikumar/Documents/GitHub/Web-Programming-Varun/Lab 5/index.html
+DESCRIPTION: This file contains a login form that authenticates the user and retrieves data from a remote server using AJAX.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax Get Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import jQuery library -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // When the document is ready, grab the HTML 
+        });
+        
+        // Function to validate user credentials
+        function validateUser(){
+            // Get the username and password from the form
+            var username = document.getElementsByName("username").value;
+            var password = document.getElementsByName("password").value;
+            
+            // Check if the credentials are valid (hard-coded for now)
+            if(true){
+                // If valid, retrieve the contents from the remote server
+                getContents();
+            }
+            else{
+                // If invalid, display an error message
+                alert("Invalid username or password");
+            }
+        }
+        
+        // Function to retrieve contents from remote server using AJAX
+        function getContents(){
+            $.ajax({
+                url: 'https://f28wp.github.io/material/tasks/Task%2008%20-%20AJAX%20&%20JSON.html',
+                success: function(data) {
+                    console.log(data);
+                    // Display the retrieved data in the HTML
+                    $('#data').html( data );
+                }
+            });
+        }
+    </script>
+</head>
+<body>    
+    <!-- Display the retrieved data here -->
+    <span id="data"></span>
+
+    <!-- Login form -->
+    <form>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login" onclick="validateUser()">
+    </form>
+
+</body>
+</html>
