@@ -25,6 +25,7 @@ DESCRIPTION: This file contains a login form that authenticates the user and ret
             margin: 0 auto;
             max-width: 400px;
             padding: 20px;
+            display:none;
         }
         h1 {
             color: #333;
@@ -68,7 +69,7 @@ DESCRIPTION: This file contains a login form that authenticates the user and ret
     <span id="data"></span>
 
     <!-- Login form -->
-    <form onsubmit="validateUser(); return false;"> <!--Prevents page from reloading-->
+    <form onsubmit="startValidation(); return false;"> <!--Prevents page from reloading-->
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <label for="password">Password:</label>
@@ -78,14 +79,25 @@ DESCRIPTION: This file contains a login form that authenticates the user and ret
 
     <script>
         $(document).ready(function(){
-            // When the document is ready, grab the HTML 
+            formShow();
         });
         
-        // Function to validate user credentials
-        function validateUser(){
-            // Get the username and password from the form
+        function formShow(){
+            // Show the form
+            $('form').show();
+        }
+
+        function startValidation(){
+            getCredentials();
+        }
+
+        function getCredentials(){
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
+            validateUser(username, password);
+        }
+        // Function to validate user credentials
+        function validateUser(username, password){
             var autheticate = false;
             
             
