@@ -1,78 +1,80 @@
+<!-- FILEPATH: /Users/varunravikumar/Documents/GitHub/Web-Programming-Varun/Lab 6/index.html -->
+<!-- This is an HTML file that contains a webpage with a news navigation bar and a tile layout. The news navigation bar contains links to different news categories. The tile layout contains tiles with news articles. The tiles have a fixed height and a transition effect on hover. -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>My Webpage</title>
-    <style>
-      .tile {
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        padding: 20px;
-        width: 21%;
-        margin: 1% 1%;
-        display: inline-block;
-        vertical-align: top;
-        height: 300px; /* added fixed height */
-        transition: all 1s ease; /* added transition */
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <title>My Webpage</title>
+        <style>
+            .tile {
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+                width: 21%;
+                margin: 1% 1%;
+                display: inline-block;
+                vertical-align: top;
+                height: 300px; /* added fixed height */
+                transition: all 1s ease; /* added transition */
+            }
 
-      .tile:hover {
-        box-shadow: 0 4px 8px #ff4500;
-        transform: translateY(-20px);
-        transition: all 1s ease;
-      }
-      h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        text-align: center;
-        color: #ff4500;
-        text-shadow: 2px 2px 4px #aaa;
-        margin-top: 50px;
-      }
-      h2 {
-        text-shadow: 1px 1px 2px #000000;
-      }
-      p {
-        text-shadow: 1px 1px 2px #000000;
-      }
-      a {
-        text-decoration: none;
-        color: #ffffff;
-      }
-      a:hover {
-        color: #ff4500;
-        text-decoration: underline;
-      }
-      /* added styles for news nav bar */
-      .news-nav {
-        background-color: #ff4500;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-      }
-      .news-nav a {
-        color: #ffffff;
-        font-size: 1.2rem;
-        margin-right: 20px;
-      }
-      .news-nav a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
+            .tile:hover {
+                box-shadow: 0 4px 8px #ff4500;
+                transform: translateY(-20px);
+                transition: all 1s ease;
+            }
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                text-align: center;
+                color: #ff4500;
+                text-shadow: 2px 2px 4px #aaa;
+                margin-top: 50px;
+            }
+            h2 {
+                text-shadow: 1px 1px 2px #000000;
+            }
+            p {
+                text-shadow: 1px 1px 2px #000000;
+            }
+            a {
+                text-decoration: none;
+                color: #ffffff;
+            }
+            a:hover {
+                color: #ff4500;
+                text-decoration: underline;
+            }
+            /* added styles for news nav bar */
+            .news-nav {
+                background-color: #ff4500;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+            .news-nav a {
+                color: #ffffff;
+                font-size: 1.2rem;
+                margin-right: 20px;
+            }
+            .news-nav a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
 
-  <body>
-    <h1>Fox News RSS Example</h1>
-    <div class="news-nav">
-      <a href="#">Home</a>
-      <a href="#">Politics</a>
-      <a href="#">Business</a>
-      <a href="#">Sports</a>
-      <a href="#">Entertainment</a>
-    </div>
+    <body>
+        <h1>Fox News RSS Example</h1>
+        <div class="news-nav">
+            <a href="#">Home</a>
+            <a href="#">Politics</a>
+            <a href="#">Business</a>
+            <a href="#">Sports</a>
+            <a href="#">Entertainment</a>
+        </div>
 
-    <script src="index.js"></script>
-  </body>
+        <script src="index.js"></script>
+    </body>
 </html>

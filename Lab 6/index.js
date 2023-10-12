@@ -1,3 +1,9 @@
+/**
+ * Fetches an RSS feed from a URL and displays the items on the page.
+ * @async
+ * @function getRssFeed
+ * @returns {Promise<void>}
+ */
 const getRssFeed = async () => {
   const prom = await fetch(
     "https://moxie.foxnews.com/google-publisher/latest.xml"
