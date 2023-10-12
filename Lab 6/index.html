@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>My Webpage</title>
-        <style>
-            h2 {
-                color: blue;
-                font-size: 24px;
-                text-align: center;
-            }
-            
-            p {
-                color: green;
-                font-size: 16px;
-                text-align: center;
-            }
-   
-                div {
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                    transition: 0.3s;
-                    width: 30%;
-                    border-radius: 5px;
-                    float: left;
-                    margin: 10px;
-                }
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Webpage</title>
+    <style>
+      .tile {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 20%;
+        margin: 1% 1%;
+        display: inline-block;
+        vertical-align: top;
+      }
 
-                .card:hover {
-                    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-                }
-
-                .container {
-                    padding: 2px 16px;
-                }
-            
-        </style>
-    </head>
-
-    <body>
-        <h2>Welcome to my webpage</h2>
-        <p>This is a paragraph of text.</p>
-        <p>This is another paragraph of text.</p>
-
-        <!-- ✅ Your JS script here ✅ -->
-        <script src="index.js"></script>
-    </body>
-</html>
-    
+      .tile:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        text-shadow: 2px 2px 4px #aaa;
+        margin-top: 50px;
+      }
+    </style>
   </head>
 
   <body>
-  
-
-    <!-- ✅ Your JS script here ✅ -->
+    <h1>Fox News RSS Example</h1>
     <script src="index.js"></script>
   </body>
 </html>

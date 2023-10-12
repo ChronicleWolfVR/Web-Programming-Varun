@@ -24,12 +24,12 @@ const getRssFeed = async () => {
     console.log("guid:", guid);
 
     const div = document.createElement("div");
+    div.classList.add("tile");
     document.body.appendChild(div);
     div.innerHTML = `
-                <h2>${title}</h2>
+    <a href='${guid}'><h2>${title}</h2></a>
                 <p>${description}</p>
         `;
-    if (guid) div.innerHTML += `<a href='${guid}'>LINK</a>`;
   });
 };
 
