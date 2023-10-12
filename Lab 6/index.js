@@ -18,18 +18,32 @@ const getRssFeed = async () => {
     const title = el.querySelector("title").textContent;
     const description = el.querySelector("description").textContent;
     const guid = el.querySelector("guid").textContent;
+    const mediaContent = el.getElementsByTagNameNS(
+      "http://search.yahoo.com/mrss/",
+      "content"
+    )[0];
+    const imageUrl = mediaContent ? mediaContent.getAttribute("url") : null;
 
     console.log("title:", title);
     console.log("description:", description);
     console.log("guid:", guid);
+    console.log("imageUrl:", imageUrl);
 
     const div = document.createElement("div");
     div.classList.add("tile");
     document.body.appendChild(div);
     div.innerHTML = `
-    <a href='${guid}'><h2>${title}</h2></a>
-                <p>${description}</p>
-        `;
+          <a href='${guid}'><h2 style="opacity:1;">${title}</h2></a>
+          <p style="opacity:1; color:white;">${description}</p>
+      `;
+
+    // Set the background image of the div element
+    if (imageUrl) {
+      div.style.backgroundImage = `url(${imageUrl})`;
+      div.style.backgroundSize = "cover";
+      div.style.backgroundPosition = "center";
+      div.style.opacity = "0.8"; // Add opacity property
+    }
   });
 };
 
