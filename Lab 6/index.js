@@ -24,11 +24,6 @@ const getRssFeed = async () => {
     )[0];
     const imageUrl = mediaContent ? mediaContent.getAttribute("url") : null;
 
-    console.log("title:", title);
-    console.log("description:", description);
-    console.log("guid:", guid);
-    console.log("imageUrl:", imageUrl);
-
     const div = document.createElement("div");
     div.classList.add("tile");
     document.body.appendChild(div);
