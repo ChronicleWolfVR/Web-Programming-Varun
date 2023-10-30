@@ -46,3 +46,83 @@ Uncaught SyntaxError: Unexpected token ';'
 15
 //Played around with node in the terminal
 //This is just an output of what I did
+
+//I learned that you can use node to run javascript in the terminal
+varunravikumar@Varuns-MacBook-Pro Lab 7 % node
+Welcome to Node.js v18.18.1.
+Type ".help" for more information.
+> node .
+... node index.js
+node index.js
+     ^^^^^
+
+Uncaught SyntaxError: Unexpected identifier
+> .help
+.break    Sometimes you get stuck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL session to a file
+
+Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+> .load index.js
+const {readFile, readFileSync} = require('fs');
+
+const txt = readFileSync('./nodeTest.txt', 'utf8');
+
+console.log(txt);
+
+console.log('Do this ASAP');
+
+Type ".help" for more information.
+> type:
+... var aa = 'test';
+undefined
+> type:
+... 
+... var aa = “test”;
+var aa = “test”;
+         
+
+Uncaught SyntaxError: Invalid or unexpected token
+> type:
+... 
+... var b = "test";;
+undefined
+> console.log("hello world");;
+hello world
+undefined
+> .help
+.break    Sometimes you get stuck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL session to a file
+
+Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+> 4+3;;
+7
+> function sumArray(arr) {
+...     let sum = 0;
+...     for (let i = 0; i < arr.length; i++) {
+...         sum += arr[i];
+...     }
+...     return sum;
+... }
+undefined
+> sumArray([1;2;3;4;5]);;
+sumArray([1;2;3;4;5]);;
+           ^
+
+Uncaught SyntaxError: Unexpected token ';'
+> sumArray([1,2,3,4,5]);;
+15
+//Played around with node in the terminal
+//This is just an output of what I did
+Do this ASAP
+undefined
+> 
