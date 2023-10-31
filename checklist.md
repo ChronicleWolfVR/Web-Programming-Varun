@@ -57,5 +57,5 @@
 
 ## Documentation
 
-- [ ]Understands the importance of documenting repositories with a README and other documentation files.
-- [ ]Good understanding of the markdown syntax (.md) used for README and other documentation (e.g., inserted titles, images, subsections, code blocks, etc.).
+- [ ] Understands the importance of documenting repositories with a README and other documentation files.
+- [ ] Good understanding of the markdown syntax (.md) used for README and other documentation (e.g., inserted titles, images, subsections, code blocks, etc.).
