@@ -52,8 +52,8 @@
 ## Collaboration
 
 - [ ] Can collaborate with others by forking and contributing to open-source projects.
-- [ ]Understands how to resolve merge conflicts.
-- [ ]Knows how to use comments and discussions in pull requests.
+- [ ] Understands how to resolve merge conflicts.
+- [ ] Knows how to use comments and discussions in pull requests.
 
 ## Documentation
 
