@@ -8,6 +8,9 @@
 - [Branching](#branching)
 - [Commits](#commits)
 - [Pull Requests](#pull-requests)
+- [Collaboration](#collaboration)
+- [Documentation](#documentation)
+
 ## Account Setup
 - [x] Create a GitHub account (and a repository)
 - [x] Add a README
@@ -34,3 +37,10 @@
 - [x] Can create a pull request to propose changes.
 - [ ] Understands the review process and how to request reviews.
 - [ ] Knows how to address feedback and make changes in a pull request.
+## Collaboration:
+ - [ ] Can collaborate with others by forking and contributing to open-source projects.
+ - [ ]Understands how to resolve merge conflicts.
+- [ ]Knows how to use comments and discussions in pull requests.
+## Documentation:
+- [ ]Understands the importance of documenting repositories with a README and other documentation files.
+- [ ]Good understanding of the markdown syntax (.md) used for README and other documentation (e.g., inserted titles, images, subsections, code blocks, …)
