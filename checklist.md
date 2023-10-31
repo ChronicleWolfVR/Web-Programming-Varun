@@ -20,7 +20,7 @@
 ## Repository Basics
 
 - [x] Create a repository
-- [ ] Understand the purpose of a README file
+- [x] Understand the purpose of a README file
 - [x] Know how to initialize a repository with a README
 - [x] Can describe the importance of a .gitignore file
 
@@ -33,7 +33,7 @@
 ## Branching
 
 - [x] Knows how to create a new branch in a repository
-- [ ] Understand the purpose of a branch in version control
+- [x] Understand the purpose of a branch in version control
 - [x] Can switch between branches
 - [x] Can merge branches using pull requests
 
