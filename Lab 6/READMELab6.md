@@ -16,6 +16,7 @@ Following code programs, simply show you how to get/read RSS xml data feeds.
 Popular list of JS/HTML/CSS news RSS feed sites to lookup
 
 https://blog.feedspot.com/javascriptrssfeeds/
+
 ## Developing a Simple RSS Feed System
 
 Visit https://rss.com/blog/popular-rss-feeds/ to lookup a popular RSS feed URL, for the following code below we'll use the Fox News feed:
@@ -32,6 +33,7 @@ let text = await prom.text();
 
 console.log( text.substring(0, 100 ) );
 '''
+
 If your code worked correctly, you should see this in your output console:
 
 <xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss xmlns:media=\"http://search.yahoo.com/mr" ...
