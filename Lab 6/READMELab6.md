@@ -26,12 +26,12 @@ URL: https://moxie.foxnews.com/google-publisher/latest.xml
 Details: Latest Headlines (world, science, events, ..)
 To check it works, first let's write a small fetch script that grabs the content (i.e., XML). We'll output the first few words to the console:
 
-'''javascript
+```javascript
 let prom = await fetch( 'https://moxie.foxnews.com/google-publisher/latest.xml' );
 let text = await prom.text();
 console.log( text.substring(0, 100 ) );
 
-'''
+```
 
 If your code worked correctly, you should see this in your output console:
 
