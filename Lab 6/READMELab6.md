@@ -10,19 +10,19 @@ RSS feeds give you a method to keep up with your favorite blogs, news sites and 
 
 Also create RSS feeds for almost any webpage (scrap important updates/information). For example, RSS feed generators that let you select the elements on a page to monitor
 
-https://rss.app/rss-feed
+<https://rss.app/rss-feed>
 Following code programs, simply show you how to get/read RSS xml data feeds.
 
 Popular list of JS/HTML/CSS news RSS feed sites to lookup
 
-https://blog.feedspot.com/javascriptrssfeeds/
+<https://blog.feedspot.com/javascriptrssfeeds/>
 
 ## Developing a Simple RSS Feed System
 
-Visit https://rss.com/blog/popular-rss-feeds/ to lookup a popular RSS feed URL, for the following code below we'll use the Fox News feed:
+Visit <https://rss.com/blog/popular-rss-feeds/> to lookup a popular RSS feed URL, for the following code below we'll use the Fox News feed:
 
 RSS Feed: Fox News
-URL: https://moxie.foxnews.com/google-publisher/latest.xml
+URL: <https://moxie.foxnews.com/google-publisher/latest.xml>
 Details: Latest Headlines (world, science, events, ..)
 To check it works, first let's write a small fetch script that grabs the content (i.e., XML). We'll output the first few words to the console:
 
@@ -34,12 +34,11 @@ console.log( text.substring(0, 100 ) );
 
 If your code worked correctly, you should see this in your output console:
 
-```
+```bash
 <xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss xmlns:media=\"http://search.yahoo.com/mr" ...
 ```
 
 Notice, we did a 'substring', this was to limit the output to 100 letters, spam fill the output window - just to check we're receiving the RSS XML content.
-
 
 You can also just open the RSS in the browser using the URL to explore the XML (see which tags and inforamtion are contained).
 
@@ -66,7 +65,7 @@ console.log('items:', items );
 
 If your program worked correctly, you should see something like the following:
 
-```
+```bash
 ["<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss xmlns:media=\"http://search.yahoo.com/mr"]
 [{"location":null}]
 ["items:",{"0":{},"1":{},"2":{},"3":{},"4":{},"5":{},"6":{},"7":{},"8":{},"9":{}}]
@@ -111,6 +110,7 @@ items.forEach( (el)=>{
 
 });
 ```
+
 ## Further Work
 
 The above example provides a simple minimal working example to get you started. Some further exercises you can try to help you further develop your understanding of the RSS feeds.
@@ -119,5 +119,6 @@ Load in multiple RSS feeds and put the information on a single web page
 Load other information (e.g., images and dates)
 Enhance the visual display (e.g., tiles, colors, font sizes, ...)
 
-# Work Completed
-I created a dynamic website that takes information received from the Fox News RSS and displays them on a webpage. Each news story is on its own tile and can be clicked to move to the linked website
+## Completed Work
+
+I created a dynamic website that takes information received from the Fox News RSS and displays them on a webpage. Each news story is on its own tile and can be clicked to move to the linked website.
