@@ -30,13 +30,16 @@ To check it works, first let's write a small fetch script that grabs the content
 let prom = await fetch( 'https://moxie.foxnews.com/google-publisher/latest.xml' );
 let text = await prom.text();
 console.log( text.substring(0, 100 ) );
-
 ```
 
 If your code worked correctly, you should see this in your output console:
 
+```
 <xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss xmlns:media=\"http://search.yahoo.com/mr" ...
+```
+
 Notice, we did a 'substring', this was to limit the output to 100 letters, spam fill the output window - just to check we're receiving the RSS XML content.
+
 
 You can also just open the RSS in the browser using the URL to explore the XML (see which tags and inforamtion are contained).
 
@@ -46,7 +49,7 @@ Next we need to parse the XML. Convert it into a structured set of data that we 
 
 If you run the following example, you should see that your DOMParser parses your received XML (xmlDoc). You then search the XML hierarchy for 'items'.
 
-'''javascript
+```javascript
 let prom = await fetch( 'https://moxie.foxnews.com/google-publisher/latest.xml' );
 let text = await prom.text();
 
@@ -59,20 +62,23 @@ console.log( xmlDoc );
 
 const items = xmlDoc.querySelectorAll("item");
 console.log('items:', items );
-'''
+```
 
 If your program worked correctly, you should see something like the following:
 
+```
 ["<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss xmlns:media=\"http://search.yahoo.com/mr"]
 [{"location":null}]
 ["items:",{"0":{},"1":{},"2":{},"3":{},"4":{},"5":{},"6":{},"7":{},"8":{},"9":{}}]
+```
+
 As you can see, there are 9 items of information in the XML (news items).
 
 ## Processing Output
 
 Now you'll loop over the items and select important information, such as the 'title', 'description' and a 'link' for further information. You'll dynamically create a set of output HTML tags so the details are display on the screen.
 
-'''javascript
+```javascript
 let prom = await fetch( 'https://moxie.foxnews.com/google-publisher/latest.xml' );
 let text = await prom.text();
 
@@ -104,7 +110,7 @@ items.forEach( (el)=>{
     if ( guid ) div.innerHTML += `<a href='${guid}'>LINK</a>`;
 
 });
-'''
+```
 ## Further Work
 
 The above example provides a simple minimal working example to get you started. Some further exercises you can try to help you further develop your understanding of the RSS feeds.
