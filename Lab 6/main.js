@@ -48,8 +48,6 @@ const getRssFeed = async () => {
   });
 };
 
-window.onload = function () {
-  console.log("start");
-  getRssFeed();
-  console.log("end");
-};
+console.log("start");
+getRssFeed();
+console.log("end");
