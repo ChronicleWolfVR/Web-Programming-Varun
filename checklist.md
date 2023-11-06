@@ -28,7 +28,7 @@
 
 - [x] Understand the difference between cloning and forking a repository
 - [x] Can clone a repository to a local machine
-- [ ] Can fork a repository to their own GitHub account
+- [x] Can fork a repository to their own GitHub account
 
 ## Branching
 
