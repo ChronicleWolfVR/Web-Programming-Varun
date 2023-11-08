@@ -7,3 +7,7 @@ The purpose of branching is to allow you to work on a feature or bugfix without 
 ## ReadMe
 
 The purpose of a README file is to provide information about the project. It should include a description of the project, how to install it, how to use it, and any other information that might be useful to someone who wants to use the project. They also include details about the project's license, contributors, and other information that might be useful to someone who wants to contribute to the project.
+
+## Reverting Commits
+
+On the 8th of November I have reverted 2 changes to demonstrate how to reverse a commit. This has been done on the gitTestIndex.html & the README file in the Lab 8 file
