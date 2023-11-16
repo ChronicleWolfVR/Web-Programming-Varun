@@ -135,7 +135,7 @@ const app = express();
 var serv = require("http").Server(app);
 
 app.get("/", function (req, res) {
-    res.send(htmlContent);
+  res.send(htmlContent);
 });
 
 serv.listen(2000);
@@ -145,26 +145,82 @@ console.log("Server started.");
 var Socket_list = {};
 
 var isValidPassword = function (data, cb) {
-    let query =
+  let query =
     "SELECT username, password FROM players WHERE username = '" +
     data.username +
     "' AND  password = '" +
     data.password +
     "'";
 
-    db.query(query, function (err, result) {
+  db.query(query, function (err, result) {
     if (err) throw err;
     if (result.length > 0) cb(true);
     else cb(false);
-    });
+  });
 };
 
 var isUsernameTaken = function (data, cb) {
-    let query =
+  let query =
     "SELECT username FROM players WHERE username = '" + data.username + "'";
-    db.query(query, function (err, result) {
+  db.query(query, function (err, result) {
     if (err) throw err;
     if (result.length > 0) cb(true);
     else cb(false);
+  });
+};
+
+var addUser = function (data, cb) {
+  let query =
+    "INSERT INTO players (username, password) VALUES ('" +
+    data.username +
+    "','" +
+    data.password +
+    "')";
+
+  db.query(query, function (err, result) {
+    if (err) throw err;
+    cb();
+  });
+};
+
+//Create socket
+var io = socket(serv, {});
+io.sockets.on("connection", function (socket) {
+  Socket_list[socket.id] = socket;
+  console.log("Socket connection");
+
+  socket.on("signIn", function (data) {
+    isValidPassword(data, function (res) {
+      if (res) {
+        Player.onConnect(socket);
+        socket.emit("signInResponse", { success: true });
+      } else {
+        socket.emit("signInResponse", { success: false });
+      }
     });
-}
+  });
+
+  socket.on("signUp", function (data) {
+    isUsernameTaken(data, function (res) {
+      if (res) {
+        socket.emit("signUpResponse", { success: false });
+      } else {
+        addUser(data, function () {
+          socket.emit("signUpResponse", { success: true });
+        });
+      }
+    });
+  });
+
+  socket.on("sendMsgToServer", function (data) {
+    var playerName = Player.list[socket.id].username;
+    for (var i in Socket_list) {
+      Socket_list[i].emit("addToChat", playerName + ": " + data);
+    }
+  });
+
+  socket.on("disconnect", function () {
+    delete Socket_list[socket.id];
+    Player.onDisconnect(socket);
+  });
+});
