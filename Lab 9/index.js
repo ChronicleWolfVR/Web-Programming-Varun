@@ -80,7 +80,7 @@ Password: <input id="signDiv-password" type="password"></input>
  var chatText  = document.getElementById('chat-text');
  var chatInput = document.getElementById('chat-input');
  var chatForm  = document.getElementById('chat-form');
- chatInput.value = 'Type text and press return';
+ chatInput.placeholder = 'Type text and press return';
 
  
  socket.on('addToChat',function(data){
