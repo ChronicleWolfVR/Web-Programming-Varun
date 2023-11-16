@@ -11,9 +11,10 @@ Key featurse:
 */
 
 // Load modules
-var express = require("express");
-var mysql = require("mysql");
-var socket = require("socket.io");
+const express = require("express");
+const mysql = require("mysql");
+const socket = require("socket.io");
+const https = require("https");
 
 //Create simple client side sit
 let htmlContent = `
@@ -103,3 +104,67 @@ Password: <input id="signDiv-password" type="password"></input>
 </html>
 `;
 
+//Server script
+
+//Connect to database
+const db = mysql.createConnection({
+  host: "sql8.freesqldatabase.com",
+  user: "sql8662615",
+  password: "KWm9ck6ggu",
+  database: "sql8662615",
+});
+
+// Connect to database
+db.connect((err) => {
+  if (err) {
+    throw err;
+  }
+  console.log("Connected to database");
+
+  let queryTable = `CREATE TABLE IF NOT EXISTS 
+players (id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(255), 
+password VARCHAR(255))`;
+  db.query(queryTable, (err, result) => {
+    console.log("Created table if not existed:" + err);
+  });
+});
+
+//Create server
+const app = express();
+var serv = require("http").Server(app);
+
+app.get("/", function (req, res) {
+    res.send(htmlContent);
+});
+
+serv.listen(2000);
+console.log("Server started.");
+
+//Create socket
+var Socket_list = {};
+
+var isValidPassword = function (data, cb) {
+    let query =
+    "SELECT username, password FROM players WHERE username = '" +
+    data.username +
+    "' AND  password = '" +
+    data.password +
+    "'";
+
+    db.query(query, function (err, result) {
+    if (err) throw err;
+    if (result.length > 0) cb(true);
+    else cb(false);
+    });
+};
+
+var isUsernameTaken = function (data, cb) {
+    let query =
+    "SELECT username FROM players WHERE username = '" + data.username + "'";
+    db.query(query, function (err, result) {
+    if (err) throw err;
+    if (result.length > 0) cb(true);
+    else cb(false);
+    });
+}
