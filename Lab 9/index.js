@@ -38,6 +38,68 @@ Password: <input id="signDiv-password" type="password"></input>
 <button id="signDiv-signUp">Sign Up</button>
 </div>
 
+<div id="gameDiv" style="display:none;">
+   <div id="chat-text" style="position:absolute;top:0px;bottom:25px;width:99%;overflow-y:scroll;">
+     <div>Logged In!</div>
+   </div>
+ 
+   <form id="chat-form">
+     <input id="chat-input" type="text" style="position:absolute;bottom:0px;height:25px;width:99%;"></input>
+   </form>
+   <button style='position:absolute;right:5px;top:5px;' onClick="window.location.reload();">Logout</button> 
+ </div>
 
-`
+ <script src="/socket.io/socket.io.js"></script>
+
+ <script>
+ var socket = io();
+ 
+ //sign
+ var signDiv         = document.getElementById('signDiv');
+ var signDivUsername = document.getElementById('signDiv-username');
+ var signDivSignIn   = document.getElementById('signDiv-signIn');
+ var signDivSignUp   = document.getElementById('signDiv-signUp');
+ var signDivPassword = document.getElementById('signDiv-password');
+ 
+ signDivSignIn.onclick = function(){
+   socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+ }
+ signDivSignUp.onclick = function(){
+   socket.emit('signUp',{username:signDivUsername.value,password:signDivPassword.value});
+ }
+ socket.on('signInResponse',function(data){
+   if(data.success){
+     signDiv.style.display = 'none';
+     gameDiv.style.display = 'inline-block';
+   } else
+     alert("Sign in unsuccessul.");
+ });
+ socket.on('signUpResponse',function(data){
+   if(data.success){
+     alert("Sign up successul.");
+   } else
+     alert("Sign up unsuccessul.");
+ });
+ 
+ //chat - only be used after logging in
+ var chatText  = document.getElementById('chat-text');
+ var chatInput = document.getElementById('chat-input');
+ var chatForm  = document.getElementById('chat-form');
+ chatInput.value = 'Type text and press return';
+
+ 
+ socket.on('addToChat',function(data){
+   chatText.innerHTML += '<div>' + data + '</div>';
+   chatText.scrollTop = chatText.scrollHeight;
+ });
+ 
+ chatForm.onsubmit = function(e){
+   e.preventDefault();
+   socket.emit('sendMsgToServer',chatInput.value);
+   chatInput.value = '';		
+ }
+</script>
+</body>
+</html>
+`;
 
