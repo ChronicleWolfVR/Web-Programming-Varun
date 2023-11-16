@@ -12,12 +12,47 @@ Key featurse:
 
 //Create simple client side sit
 let htmlContent = `
-<!DOCTYPE html>
+<!DOCTYPE html> //html content
 <html>
 <head>
 <title>Chat</title>
 <style>
-#signDiv {
+#signDiv, #gameDiv {
+  font-family: Arial;
+  text-align: center;
+}
+
+#signDiv-username, #signDiv-password {
+  margin: 5px;
+}
+
+#signDiv-signIn, #signDiv-signUp {
+  margin: 5px;
+}
+
+#chat-text {
+  text-align: left;
+}
+
+#chat-input {
+  width: 100%;
+}
+
+#chat-form {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+#gameDiv {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: left;
+  position: relative;
 }
 
 
@@ -25,7 +60,7 @@ let htmlContent = `
 
 </head>
 <body>
-<div id="signDiv">
+<div id="signDiv"> //sign in div form
 Username: <input id="signDiv-username" type="text"></input><br>
 Password: <input id="signDiv-password" type="password"></input>
 <br>
@@ -33,7 +68,7 @@ Password: <input id="signDiv-password" type="password"></input>
 <button id="signDiv-signUp">Sign Up</button>
 </div>
 
-<div id="gameDiv" style="display:none;">
+<div id="gameDiv" style="display:none;"> //chat div form
    <div id="chat-text" style="position:absolute;top:0px;bottom:25px;width:99%;overflow-y:scroll;">
      <div>Logged In!</div>
    </div>
@@ -196,6 +231,7 @@ io.sockets.on("connection", function (socket) {
   socket.on("signIn", function (data) {
     isValidPassword(data, function (res) {
       if (res) {
+        socket.username = data.username;
         socket.emit("signInResponse", { success: true });
       } else {
         socket.emit("signInResponse", { success: false });
@@ -215,7 +251,7 @@ io.sockets.on("connection", function (socket) {
   });
 
   socket.on("sendMsgToServer", function (data) {
-    var playerName = "" + socket.id.slice(2, 7);
+    var playerName = socket.username;
     for (var i in SOCKET_LIST) {
       SOCKET_LIST[i].emit("addToChat", playerName + ": " + data);
     }
